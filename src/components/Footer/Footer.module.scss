@@ -1,0 +1,169 @@
+
+.footer {
+  background-image: url("https://biticodes.com/wp-content/uploads/2022/05/shutterstock_1950138799-.jpg");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  width: 100%;
+
+  .background {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    background-color: black;
+    opacity: .3;
+    transition: background .3s, border-radius .3s, opacity .3s;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 3% 12%;
+
+    position: relative;
+    z-index: 999;
+
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+
+      .link {
+        @font-face {
+          font-family: Montserrat, Sans-serif;
+          src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
+        }
+        font-size: 30px;
+        font-weight: 700;
+        text-decoration: underline;
+        line-height: 35px;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 3% 0 10%;
+
+      .textBlock {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .text {
+          font-size: 24px;
+          line-height: 38px;
+          font-weight: 500;
+          color: #FFFFFF;
+        }
+      }
+
+      .contactBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+
+        .twitter {
+          cursor: pointer;
+        }
+
+        .phone {
+          font-size: 28px;
+          font-weight: 600;
+          color: #FFFFFF;
+
+          cursor: pointer;
+        }
+      }
+    }
+
+    .otherInfo {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .supportBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .copyrightBlock {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .copyrightText {
+            @font-face {
+              font-family: Montserrat, Sans-serif;
+              src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
+            }
+            font-size: 18px;
+            font-weight: 700;
+            color: #FFFFFF;
+          }
+        }
+
+        .support {
+          @font-face {
+            font-family: Montserrat, Sans-serif;
+            src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
+          }
+          font-size: 18px;
+          font-weight: 400;
+          color: #FFFFFF;
+
+          cursor: pointer;
+        }
+      }
+
+      .addressBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .addressText {
+          @font-face {
+            font-family: Montserrat, Sans-serif;
+            src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
+          }
+          font-size: 24px;
+          font-weight: 600;
+          color: #FFFFFF;
+        }
+      }
+
+      .policyBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .policyLink {
+          @font-face {
+            font-family: Montserrat, Sans-serif;
+            src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
+          }
+          font-size: 26px;
+          font-weight: 600;
+          text-decoration: underline;
+          color: #FFFFFF;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
