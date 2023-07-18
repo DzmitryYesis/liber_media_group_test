@@ -32,19 +32,9 @@
     z-index: 999;
 
     .navbar {
-      @include flexBox(30px, row, normal, normal);
-      /*display: flex;
-      flex-direction: row;
-      gap: 30px;*/
+      @include flexBox(30px, row);
 
       .link {
-        /*@font-face {
-          font-family: Montserrat, Sans-serif;
-          src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
-        }
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 35px;*/
         @include textFont(30px, 35px, 700);
         text-decoration: underline;
         color: $white;
@@ -55,33 +45,20 @@
     .content {
       width: 100%;
       @include flexBox(0, row, normal, space-between);
-      /*display: flex;
-      flex-direction: row;
-      justify-content: space-between;*/
       padding: 3% 0 10%;
 
       .textBlock {
         width: 60%;
-        /*display: flex;
-        flex-direction: column;
-        gap: 25px;*/
-        @include flexBox(25px, column, normal, normal);
+        @include flexBox(25px, column);
 
         .text {
           @include textFont(24px, 38px, 500);
-          /*font-size: 24px;
-          line-height: 38px;
-          font-weight: 500;*/
           color: $white;
         }
       }
 
       .contactBlock {
-        /*display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 20px;*/
-        @include flexBox(20px, row, flex-start, normal);
+        @include flexBox(20px, row, flex-start);
 
         .twitter {
           cursor: pointer;
@@ -99,43 +76,21 @@
 
     .otherInfo {
       width: 100%;
-      /*display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;*/
       @include flexBox(0, row, center, space-between);
 
       .supportBlock {
-        /*display: flex;
-        flex-direction: column;
-        gap: 25px;*/
-        @include flexBox(25px, column, normal, normal);
+        @include flexBox(25px, column);
 
         .copyrightBlock {
-          @include flexBox(10px, column, normal, normal);
-          /*display: flex;
-          flex-direction: column;
-          gap: 10px;*/
+          @include flexBox(10px, column);
 
           .copyrightText {
             @include textFont(18px, 20px, 700);
-            /*@font-face {
-              font-family: Montserrat, Sans-serif;
-              src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
-            }
-            font-size: 18px;
-            font-weight: 700;*/
             color: $white;
           }
         }
 
         .support {
-          /*@font-face {
-            font-family: Montserrat, Sans-serif;
-            src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
-          }
-          font-size: 18px;
-          font-weight: 400;*/
           @include textFont(18px, 20px, 400);
           color: $white;
 
@@ -144,37 +99,19 @@
       }
 
       .addressBlock {
-        @include flexBox(10px, column, normal, normal);
-        /*display: flex;
-        flex-direction: column;
-        gap: 10px;*/
+        @include flexBox(10px, column);
 
         .addressText {
           @include textFont(24px, 28px, 600);
-          /*@font-face {
-            font-family: Montserrat, Sans-serif;
-            src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
-          }
-          font-size: 24px;
-          font-weight: 600;*/
           color: $white;
         }
       }
 
       .policyBlock {
-        /*display: flex;
-        flex-direction: column;
-        gap: 5px;*/
-        @include flexBox(5px, column, normal, normal);
+        @include flexBox(5px, column);
 
         .policyLink {
           @include textFont(26px, 28px, 600);
-          /*@font-face {
-            font-family: Montserrat, Sans-serif;
-            src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
-          }
-          font-size: 26px;
-          font-weight: 600;*/
           text-decoration: underline;
           color: $white;
 
