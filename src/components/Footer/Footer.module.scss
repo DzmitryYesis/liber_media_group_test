@@ -1,3 +1,5 @@
+@import "src/assets/styles/colors";
+@import "src/assets/styles/utils";
 
 .footer {
   background-image: url("https://biticodes.com/wp-content/uploads/2022/05/shutterstock_1950138799-.jpg");
@@ -15,7 +17,7 @@
     left: 0;
     position: absolute;
 
-    background-color: black;
+    background-color: $black;
     opacity: .3;
     transition: background .3s, border-radius .3s, opacity .3s;
   }
@@ -30,50 +32,56 @@
     z-index: 999;
 
     .navbar {
-      display: flex;
+      @include flexBox(30px, row, normal, normal);
+      /*display: flex;
       flex-direction: row;
-      gap: 30px;
+      gap: 30px;*/
 
       .link {
-        @font-face {
+        /*@font-face {
           font-family: Montserrat, Sans-serif;
           src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
         }
         font-size: 30px;
         font-weight: 700;
+        line-height: 35px;*/
+        @include textFont(30px, 35px, 700);
         text-decoration: underline;
-        line-height: 35px;
-        color: #FFFFFF;
+        color: $white;
         cursor: pointer;
       }
     }
 
     .content {
       width: 100%;
-      display: flex;
+      @include flexBox(0, row, normal, space-between);
+      /*display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-between;*/
       padding: 3% 0 10%;
 
       .textBlock {
         width: 60%;
-        display: flex;
+        /*display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 25px;*/
+        @include flexBox(25px, column, normal, normal);
 
         .text {
-          font-size: 24px;
+          @include textFont(24px, 38px, 500);
+          /*font-size: 24px;
           line-height: 38px;
-          font-weight: 500;
-          color: #FFFFFF;
+          font-weight: 500;*/
+          color: $white;
         }
       }
 
       .contactBlock {
-        display: flex;
+        /*display: flex;
         flex-direction: row;
         align-items: flex-start;
-        gap: 20px;
+        gap: 20px;*/
+        @include flexBox(20px, row, flex-start, normal);
 
         .twitter {
           cursor: pointer;
@@ -82,7 +90,7 @@
         .phone {
           font-size: 28px;
           font-weight: 600;
-          color: #FFFFFF;
+          color: $white;
 
           cursor: pointer;
         }
@@ -91,75 +99,84 @@
 
     .otherInfo {
       width: 100%;
-      display: flex;
+      /*display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: center;*/
+      @include flexBox(0, row, center, space-between);
 
       .supportBlock {
-        display: flex;
+        /*display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 25px;*/
+        @include flexBox(25px, column, normal, normal);
 
         .copyrightBlock {
-          display: flex;
+          @include flexBox(10px, column, normal, normal);
+          /*display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 10px;*/
 
           .copyrightText {
-            @font-face {
+            @include textFont(18px, 20px, 700);
+            /*@font-face {
               font-family: Montserrat, Sans-serif;
               src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
             }
             font-size: 18px;
-            font-weight: 700;
-            color: #FFFFFF;
+            font-weight: 700;*/
+            color: $white;
           }
         }
 
         .support {
-          @font-face {
+          /*@font-face {
             font-family: Montserrat, Sans-serif;
             src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
           }
           font-size: 18px;
-          font-weight: 400;
-          color: #FFFFFF;
+          font-weight: 400;*/
+          @include textFont(18px, 20px, 400);
+          color: $white;
 
           cursor: pointer;
         }
       }
 
       .addressBlock {
-        display: flex;
+        @include flexBox(10px, column, normal, normal);
+        /*display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 10px;*/
 
         .addressText {
-          @font-face {
+          @include textFont(24px, 28px, 600);
+          /*@font-face {
             font-family: Montserrat, Sans-serif;
             src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
           }
           font-size: 24px;
-          font-weight: 600;
-          color: #FFFFFF;
+          font-weight: 600;*/
+          color: $white;
         }
       }
 
       .policyBlock {
-        display: flex;
+        /*display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 5px;*/
+        @include flexBox(5px, column, normal, normal);
 
         .policyLink {
-          @font-face {
+          @include textFont(26px, 28px, 600);
+          /*@font-face {
             font-family: Montserrat, Sans-serif;
             src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
           }
           font-size: 26px;
-          font-weight: 600;
+          font-weight: 600;*/
           text-decoration: underline;
-          color: #FFFFFF;
+          color: $white;
 
           cursor: pointer;
         }

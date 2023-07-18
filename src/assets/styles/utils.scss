@@ -1,0 +1,18 @@
+@mixin flexBox($gap, $direction: row, $align: center, $justify: space-between) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin textFont($font, $lh, $weight) {
+  @font-face {
+    font-family: Montserrat, Sans-serif;
+    src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
+  }
+  font-size: $font;
+  line-height: $lh;
+  letter-spacing: 0;
+  font-weight: $weight;
+}
