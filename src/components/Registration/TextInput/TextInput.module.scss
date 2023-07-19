@@ -1,0 +1,42 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.container {
+  @include flexBox(10px, column);
+  width: 100%;
+
+  &_phone {
+    @include flexBox(10px, column);
+    width: 90%;
+  }
+
+  .input {
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 25px;
+
+    @include textFont(25px, 35px, 600);
+    color: $black;
+
+    &_error {
+      border: 2px solid $red;
+    }
+
+    &_correct {
+      border: 2px solid $green;
+    }
+
+    &_phone {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .errorMessage {
+    @include textFont(15px, 18px, 400);
+    color: $red;
+  }
+}
+

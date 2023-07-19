@@ -1,0 +1,13 @@
+@import "src/assets/styles/utils";
+
+
+.container {
+  width: 60%;
+  @include flexBox(20px, column);
+  padding-bottom: 5%;
+
+  .phoneContainer {
+    width: 100%;
+    @include flexBox(0, row, center, center);
+  }
+}

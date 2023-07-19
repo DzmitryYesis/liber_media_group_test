@@ -20,6 +20,10 @@
       width: 100%;
       @include flexBox(0, row, normal, space-between);
 
+      .img {
+        cursor: pointer;
+      }
+
       .navbar {
         @include flexBox(35px, row, normal, normal);
 
