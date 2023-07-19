@@ -1,0 +1,59 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.container {
+  position: relative;
+
+  .currentLanguage {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-left: 20px;
+    width: 255px;
+    height: 55px;
+    background-color: $white;
+    @include flexBox(10px, row, center, flex-start);
+    color: $black;
+
+    &:hover {
+      background-color: gray;
+      color: $white;
+    }
+  }
+
+  .languageTitle {
+    @include textFont(18px, 24px, 600);
+  }
+
+  .img {
+    width: 25px;
+    height: 18px;
+  }
+
+  .dropContainer {
+    @include flexBox(0, column);
+    position: relative;
+
+    .dropList {
+      @include flexBox(0, column);
+      position: absolute;
+      top: 55px;
+
+      .dropItem {
+        box-sizing: border-box;
+        padding-left: 20px;
+        border-top: 1px solid gray;
+        width: 255px;
+        height: 45px;
+        background-color: $white;
+        @include flexBox(10px, row, center, flex-start);
+        cursor: pointer;
+        color: $black;
+
+        &:hover {
+          background-color: gray;
+          color: $white;
+        }
+      }
+    }
+  }
+}

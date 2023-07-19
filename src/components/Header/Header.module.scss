@@ -10,13 +10,14 @@
   width: 100%;
 
   .container {
-    @include flexBox(30px, column);
+    @include flexBox(100px, column, center, center);
     padding: 4% 6%;
 
     position: relative;
-    z-index: 999;
+    z-index: 98;
 
     .navbarContainer {
+      width: 100%;
       @include flexBox(0, row, normal, space-between);
 
       .navbar {
@@ -33,6 +34,16 @@
             color: gray;
           }
         }
+      }
+    }
+
+    .titleBlock {
+      width: 60%;
+      @include flexBox(10px, column, center, center);
+
+      .title {
+        @include textFont(70px, 85px, 700);
+        color: $white
       }
     }
   }

@@ -8,6 +8,7 @@
 
   @include flexBox(0, column, center, center);
   position: fixed;
+  z-index: 99;
 
   .content {
     @include flexBox(20px, row);

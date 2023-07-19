@@ -1,4 +1,5 @@
 import s from './Header.module.scss';
+import {LanguageSelect} from './LanguageSelect/LanguageSelect';
 
 export const Header = () => {
     return (
@@ -12,7 +13,13 @@ export const Header = () => {
                         <span className={s.link}>ABOUT US</span>
                         <span className={s.link}>CONTACT US</span>
                         <span className={s.link}>LOGIN</span>
+                        <LanguageSelect/>
                     </div>
+                </div>
+                <div className={s.titleBlock}>
+                    <span className={s.title}>Biticodes & BTC iPlex Pro App - AI </span>
+                    <span className={s.title}>powered crypto trading bot for</span>
+                    <span className={s.title}>beginners & advance traders alike.</span>
                 </div>
             </div>
         </div>
