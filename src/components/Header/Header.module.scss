@@ -1,0 +1,39 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.header {
+  background-image: url("https://biticodes.com/wp-content/uploads/2022/05/shutterstock_1976768306.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+
+  .container {
+    @include flexBox(30px, column);
+    padding: 4% 6%;
+
+    position: relative;
+    z-index: 999;
+
+    .navbarContainer {
+      @include flexBox(0, row, normal, space-between);
+
+      .navbar {
+        @include flexBox(35px, row, normal, normal);
+
+        .link {
+          @include textFont(34px, 48px, 700);
+          color: $white;
+          transition: ease-in-out 0.2s;
+
+          cursor: pointer;
+
+          &:hover {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+}
