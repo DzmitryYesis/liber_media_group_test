@@ -55,8 +55,12 @@ export const LanguageSelect = () => {
                     <div className={s.dropContainer} onMouseOut={onMouseOutHandle}
                          onMouseOver={onMouseOverHandle}>
                         <div className={s.currentLanguage}>
-                            <img className={s.img} src={value.img} alt={'flag-country'}/>
-                            <span className={s.languageTitle}>{value.language}</span>
+                            <div className={s.langWrapper}>
+                                <img className={s.img} src={value.img}
+                                     alt={'flag-country'}/>
+                                <span className={s.languageTitle}>{value.language}</span>
+                            </div>
+                            <div className={s.triangleDown_open}/>
                         </div>
                         <div className={s.dropList}>
                             {
@@ -76,8 +80,11 @@ export const LanguageSelect = () => {
                     </div>
                 ) : (
                     <div className={s.currentLanguage} onMouseOver={onMouseOverHandle}>
-                        <img className={s.img} src={value.img} alt={'flag-country'}/>
-                        <span className={s.languageTitle}>{value.language}</span>
+                        <div className={s.langWrapper}>
+                            <img className={s.img} src={value.img} alt={'flag-country'}/>
+                            <span className={s.languageTitle}>{value.language}</span>
+                        </div>
+                        <div className={s.triangleDown}/>
                     </div>
                 )}
         </div>

@@ -3,7 +3,7 @@
 
 .container {
   position: relative;
-  width: 10%;
+  width: 12%;
 
   .currentCountry {
     cursor: pointer;
@@ -30,6 +30,10 @@
   .img {
     width: 25px;
     height: 18px;
+  }
+
+  .arrow_img {
+    transform: rotate(180deg)
   }
 
   .country {

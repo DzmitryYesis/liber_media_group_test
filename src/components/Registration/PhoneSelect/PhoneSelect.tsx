@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import s from './PhoneSelect.module.scss';
 import {PhoneSelectType} from '../Registration';
+import arrow from '../../../assets/icon/arrow-top-chevron-chevron-top-svgrepo-com.svg'
 
 type PhoneSelectPropsType = {
     listOfValue: PhoneSelectType[]
@@ -34,6 +35,7 @@ export const PhoneSelect = ({
                             <img className={s.img} src={currentValue.img}
                                  alt={'flag-country'}/>
                             <span className={s.countryCode}>{currentValue.code}</span>
+                            <img src={arrow} alt={"arrow"}/>
                         </div>
                         <div className={s.dropList}>
                             {
@@ -58,6 +60,7 @@ export const PhoneSelect = ({
                         <img className={s.img} src={currentValue.img}
                              alt={'flag-country'}/>
                         <span className={s.countryCode}>{currentValue.code}</span>
+                        <img className={s.arrow_img} src={arrow} alt={"arrow"}/>
                     </div>
                 )}
         </div>

@@ -7,21 +7,41 @@
   .currentLanguage {
     cursor: pointer;
     box-sizing: border-box;
-    padding-left: 20px;
     width: 255px;
     height: 55px;
     background-color: $white;
-    @include flexBox(10px, row, center, flex-start);
+    @include flexBox(100px, row, center, center);
     color: $black;
 
     &:hover {
       background-color: $gray;
       color: $white;
     }
+
+    .langWrapper {
+      @include flexBox(10px, row, center, flex-start);
+    }
   }
+
 
   .languageTitle {
     @include textFont(18px, 24px, 600);
+  }
+
+  .triangleDown {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid $black;
+
+    &_open {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 20px solid $white;
+    }
   }
 
   .img {
