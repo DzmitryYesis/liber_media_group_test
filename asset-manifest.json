@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/liber_media_group_test/static/css/main.50130529.css",
+    "main.js": "/liber_media_group_test/static/js/main.37c68e18.js",
+    "static/js/787.1a70f624.chunk.js": "/liber_media_group_test/static/js/787.1a70f624.chunk.js",
+    "static/media/au.svg": "/liber_media_group_test/static/media/au.932d918261bcbb88f0cc22baa8e5f32f.svg",
+    "static/media/icons8-твиттер-24.svg": "/liber_media_group_test/static/media/icons8-твиттер-24.e50a712e19d668aa8a0ed42d415e3191.svg",
+    "static/media/ca.svg": "/liber_media_group_test/static/media/ca.d348137a99e6d528c5b7ffec1e05488a.svg",
+    "static/media/gb.svg": "/liber_media_group_test/static/media/gb.ba1c7f5df0dd4173c951a644c65e02df.svg",
+    "static/media/arrow-top-chevron-chevron-top-svgrepo-com.svg": "/liber_media_group_test/static/media/arrow-top-chevron-chevron-top-svgrepo-com.12160ca3d325acd49f070c78e154fcb5.svg",
+    "index.html": "/liber_media_group_test/index.html",
+    "static/media/fr.svg": "/liber_media_group_test/static/media/fr.81d43a151d8bc64145f25bc3d4cdc02a.svg",
+    "static/media/it.svg": "/liber_media_group_test/static/media/it.290f2fec799fabdf2a85be3d2a2f9977.svg",
+    "static/media/se.svg": "/liber_media_group_test/static/media/se.22333e71c0c3e3d8da11f6e7985c622b.svg",
+    "static/media/de.svg": "/liber_media_group_test/static/media/de.7e82f4c71df5fc78abbb54a6f82ed299.svg",
+    "main.50130529.css.map": "/liber_media_group_test/static/css/main.50130529.css.map",
+    "main.37c68e18.js.map": "/liber_media_group_test/static/js/main.37c68e18.js.map",
+    "787.1a70f624.chunk.js.map": "/liber_media_group_test/static/js/787.1a70f624.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50130529.css",
+    "static/js/main.37c68e18.js"
+  ]
+}
