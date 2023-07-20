@@ -1,5 +1,5 @@
 @import "src/assets/styles/utils";
-
+@import "src/assets/styles/colors";
 
 .container {
   width: 60%;
@@ -8,6 +8,20 @@
 
   .phoneContainer {
     width: 100%;
-    @include flexBox(0, row, center, center);
+    @include flexBox(0, row, flex-start, center);
+  }
+
+  .button {
+    width: 100%;
+    height: 60px;
+    background-color: $orange;
+    @include textFont(30px, 45px, 700);
+    color: $black;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: $gray;
+      cursor: pointer;
+    }
   }
 }

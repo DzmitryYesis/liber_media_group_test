@@ -6,6 +6,7 @@ import {au, gb, ca} from '../../assets/icon/index';
 import {PhoneSelect} from './PhoneSelect/PhoneSelect';
 import {useState} from 'react';
 import {Country, PhoneExample} from './enum';
+import {registrationRequest, RegistrationRequestBodyType} from '../../api/registration';
 
 export type PhoneSelectType = {
     code: string,
@@ -50,7 +51,8 @@ export const Registration = () => {
         onChangeText: firstNameOnChangeText,
         error: firstNameError,
         errorMessage: firstNameErrorMessage,
-        onBlur: firstNameOnBlur
+        onBlur: firstNameOnBlur,
+        isValid: firstNameIsValid,
     } = useInput(firstNameValidate)
 
     const {
@@ -58,7 +60,8 @@ export const Registration = () => {
         onChangeText: lastNameOnChangeText,
         error: lastNameError,
         errorMessage: lastNameErrorMessage,
-        onBlur: lastNameOnBlur
+        onBlur: lastNameOnBlur,
+        isValid: lastNameIsValid,
     } = useInput(lastNameValidate)
 
     const {
@@ -66,7 +69,8 @@ export const Registration = () => {
         onChangeText: emailOnChangeText,
         error: emailError,
         errorMessage: emailErrorMessage,
-        onBlur: emailOnBlur
+        onBlur: emailOnBlur,
+        isValid: emailIsValid,
     } = useInput(emailValidate)
 
     const {
@@ -74,13 +78,39 @@ export const Registration = () => {
         onChangeText: phoneOnChangeText,
         error: phoneError,
         errorMessage: phoneErrorMessage,
-        onBlur: phoneOnBlur
+        onBlur: phoneOnBlur,
+        isValid: phoneIsValid
     } = useInput(phoneValidation)
 
 
     const currentCodeHandler = (item: PhoneSelectType) => {
         setCurrentCode(item)
     }
+
+    const registrationHandle = () => {
+        const requestBody: RegistrationRequestBodyType = {
+            ApiKey: 'TlRZNE5GODFNVEJmTlRZNE5GOD0=',
+            ApiPassword: 'ZTLV6Ava1J',
+            CampaignID: '8286',
+            FirstName: firstNameValue,
+            LastName: lastNameValue,
+            Email: emailValue,
+            PhoneNumber: `${currentCode.code}${phoneValue}`,
+            Description: '',
+            Page: window.location.pathname,
+            IP: '',
+        }
+
+        registrationRequest(requestBody).then((res) => {
+            if (res.status === 200) {
+                console.log('Great')
+            } else {
+                console.log('Error')
+            }
+        })
+    }
+
+    const disabledButton = firstNameError || lastNameError || emailError || phoneError || !firstNameValue || !lastNameValue || !emailValue || !phoneValue
 
     return (
         <div className={s.container}>
@@ -90,6 +120,7 @@ export const Registration = () => {
                 onBlur={firstNameOnBlur}
                 error={firstNameError}
                 errorMessage={firstNameErrorMessage}
+                isValid={firstNameIsValid}
                 placeholder={'First Name'}/>
             <TextInput
                 value={lastNameValue}
@@ -97,6 +128,7 @@ export const Registration = () => {
                 onBlur={lastNameOnBlur}
                 error={lastNameError}
                 errorMessage={lastNameErrorMessage}
+                isValid={lastNameIsValid}
                 placeholder={'Last Name'}/>
             <TextInput
                 value={emailValue}
@@ -104,6 +136,7 @@ export const Registration = () => {
                 onBlur={emailOnBlur}
                 error={emailError}
                 errorMessage={emailErrorMessage}
+                isValid={emailIsValid}
                 placeholder={'Email'}/>
             <div className={s.phoneContainer}>
                 <PhoneSelect
@@ -116,9 +149,14 @@ export const Registration = () => {
                     placeholder={currentCode.placeholder}
                     error={phoneError}
                     errorMessage={phoneErrorMessage}
+                    isValid={phoneIsValid}
                     onBlur={phoneOnBlur}
                     phoneNumber={true}/>
             </div>
+            <button className={s.button} onClick={registrationHandle}
+                    disabled={disabledButton}>
+                REGISTER SECURELY NOW
+            </button>
         </div>
     )
 }
