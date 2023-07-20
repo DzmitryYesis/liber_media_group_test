@@ -31,4 +31,4 @@ API DOC: https://tracker.pablo.partners/help/#api_integration
 - #### react / react-dom
 - #### eslint prettier
 
-- ### [Result](https://dzmitryyesis.github.io/liber_media_group_test)
+
