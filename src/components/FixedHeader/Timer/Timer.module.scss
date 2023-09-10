@@ -2,6 +2,6 @@
 @import "src/assets/styles/colors";
 
 .timer {
-  @include textFont(30px, 45px, 600);
+  @include textFont(calc(20px + 10 * ((100vw - 1024px) / 896)), 45px, 600);
   color: $black;
 }

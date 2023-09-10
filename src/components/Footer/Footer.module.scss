@@ -35,7 +35,7 @@
       @include flexBox(30px, row);
 
       .link {
-        @include textFont(30px, 35px, 700);
+        @include textFont(calc(20px + 10 * ((100vw - 1024px) / 896)), normal, 700);
         text-decoration: underline;
         color: $white;
         cursor: pointer;
@@ -52,7 +52,7 @@
         @include flexBox(25px, column);
 
         .text {
-          @include textFont(24px, 38px, 500);
+          @include textFont(calc(16px + 8 * ((100vw - 1024px) / 896)), normal, 500);
           color: $white;
         }
       }
@@ -61,11 +61,13 @@
         @include flexBox(20px, row, flex-start);
 
         .twitter {
+          width: min(45px, calc(30px + 15 * ((100vw - 1024px) / 896)));
+          height: min(45px, calc(30px + 15 * ((100vw - 1024px) / 896)));
           cursor: pointer;
         }
 
         .phone {
-          font-size: 28px;
+          font-size: calc(20px + 8 * ((100vw - 1024px) / 896));
           font-weight: 600;
           color: $white;
 
@@ -85,13 +87,13 @@
           @include flexBox(10px, column);
 
           .copyrightText {
-            @include textFont(18px, 20px, 700);
+            @include textFont(calc(12px + 6 * ((100vw - 1024px) / 896)), normal, 700);
             color: $white;
           }
         }
 
         .support {
-          @include textFont(18px, 20px, 400);
+          @include textFont(calc(10px + 8 * ((100vw - 1024px) / 896)), normal, 400);
           color: $white;
 
           cursor: pointer;
@@ -102,7 +104,7 @@
         @include flexBox(10px, column);
 
         .addressText {
-          @include textFont(24px, 28px, 600);
+          @include textFont(calc(14px + 10 * ((100vw - 1024px) / 896)), normal, 600);
           color: $white;
         }
       }
@@ -111,7 +113,7 @@
         @include flexBox(5px, column);
 
         .policyLink {
-          @include textFont(26px, 28px, 600);
+          @include textFont(calc(16px + 10 * ((100vw - 1024px) / 896)), normal, 600);
           text-decoration: underline;
           color: $white;
 

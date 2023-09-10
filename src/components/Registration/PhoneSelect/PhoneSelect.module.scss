@@ -3,14 +3,14 @@
 
 .container {
   position: relative;
-  width: 12%;
+  width: min(200px, calc(120px + 80 * ((100vw - 1024px) / 896)));
 
   .currentCountry {
     cursor: pointer;
     box-sizing: border-box;
     padding-left: 20px;
     width: 100%;
-    height: 80px;
+    height: 7.4vh;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: $gray;
@@ -19,17 +19,17 @@
   }
 
   .countryCode {
-    @include textFont(24px, 28px, 600);
+    @include textFont(calc(14px + 10 * ((100vw - 1024px) / 896)), normal, 600);
 
     &_open {
-      @include textFont(24px, 28px, 400);
+      @include textFont(calc(14px + 10 * ((100vw - 1024px) / 896)), normal, 400);
       color: $gray;
     }
   }
 
   .img {
-    width: 25px;
-    height: 18px;
+    width: min(25px, calc(18px + 7 * ((100vw - 1024px) / 896)));
+    height: min(18px, calc(12px + 6 * ((100vw - 1024px) / 896)));
   }
 
   .arrow_img {
@@ -37,7 +37,7 @@
   }
 
   .country {
-    @include textFont(24px, 28px, 600);
+    @include textFont(calc(14px + 10 * ((100vw - 1024px) / 896)), normal, 600);
   }
 
   .dropContainer {
@@ -47,14 +47,14 @@
     .dropList {
       @include flexBox(0, column);
       position: absolute;
-      top: 80px;
+      top: min(80px, calc(55px + 25 * ((100vw - 1024px) / 896)));
 
       .dropItem {
         box-sizing: border-box;
         padding-left: 20px;
         border-top: 1px solid $gray;
-        width: 400px;
-        height: 50px;
+        width: min(400px, calc(200px + 200 * ((100vw - 1024px) / 896)));
+        height: min(50px, calc(35px + 15 * ((100vw - 1024px) / 896)));
         background-color: $white;
         @include flexBox(10px, row, center, flex-start);
         cursor: pointer;

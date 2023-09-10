@@ -3,18 +3,18 @@
 
 .container {
   width: 100%;
-  height: 60px;
-  background-color: #48ff00;
+  height: 5vh;
+  background-color: $light_green;
 
   @include flexBox(0, column, center, center);
   position: fixed;
   z-index: 99;
 
   .content {
-    @include flexBox(20px, row);
+    @include flexBox(1vw, row);
 
     .timer {
-      @include textFont(30px, 45px, 600);
+      @include textFont(calc(20px + 10 * ((100vw - 1024px) / 896)), 45px, 600);
       color: $black;
     }
   }

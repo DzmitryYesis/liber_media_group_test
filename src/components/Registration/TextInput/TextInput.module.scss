@@ -13,12 +13,12 @@
   .input {
     box-sizing: border-box;
     width: 100%;
-    height: 80px;
+    height: 7.4vh;
     border-radius: 10px;
     border: none;
     padding-left: 25px;
 
-    @include textFont(25px, 35px, 600);
+    @include textFont(calc(18px + 7 * ((100vw - 1024px) / 896)), normal, 600);
     color: $black;
 
     &_error {
@@ -42,13 +42,15 @@
 
     .img {
       position: absolute;
-      bottom: 20px;
+      width: min(48px, calc(24px + 24 * ((100vw - 1024px) / 896)));
+      height: min(48px, calc(24px + 24 * ((100vw - 1024px) / 896)));
+      bottom: min(20px, calc(15px + 5 * ((100vw - 1024px) / 896)));
       right: 10px;
     }
   }
 
   .errorMessage {
-    @include textFont(15px, 18px, 400);
+    @include textFont(calc(10px + 5 * ((100vw - 1024px) / 896)), normal, 400);
     color: $red;
   }
 }

@@ -10,7 +10,7 @@
   width: 100%;
 
   .container {
-    @include flexBox(100px, column, center, center);
+    @include flexBox(9.25vh, column, center, center);
     padding: 4% 6%;
 
     position: relative;
@@ -22,31 +22,32 @@
 
       .img {
         cursor: pointer;
+        width: calc(143px + 143 * ((100vw - 1024px) / 896));
+        height: calc(52px + 52 * ((100vw - 1024px) / 896));
       }
 
       .navbar {
-        @include flexBox(35px, row, normal, normal);
+        @include flexBox(1.82vw, row, center, normal);
 
         .link {
-          @include textFont(34px, 48px, 700);
+          @include textFont(calc(20px + 14 * ((100vw - 1024px) / 896)), normal, 700);
           color: $white;
           transition: ease-in-out 0.2s;
 
           cursor: pointer;
 
           &:hover {
-            color: gray;
+            color: $gray;
           }
         }
       }
     }
 
     .titleBlock {
-      width: 60%;
-      @include flexBox(10px, column, center, center);
+      @include flexBox(0.9vh, column, center, center);
 
       .title {
-        @include textFont(70px, 85px, 700);
+        @include textFont(calc(40px + 30 * ((100vw - 1024px) / 896)), normal, 700);
         color: $white
       }
     }
