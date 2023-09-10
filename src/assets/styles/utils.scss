@@ -7,10 +7,7 @@
 }
 
 @mixin textFont($font, $lh, $weight) {
-  @font-face {
-    font-family: Montserrat, Sans-serif;
-    src: url("https://fonts.google.com/specimen/Montserrat?query=mont");
-  }
+  font-family: Montserrat, sans-serif;
   font-size: $font;
   line-height: $lh;
   letter-spacing: 0;

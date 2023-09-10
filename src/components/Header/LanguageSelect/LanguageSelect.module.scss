@@ -7,10 +7,10 @@
   .currentLanguage {
     cursor: pointer;
     box-sizing: border-box;
-    width: 255px;
-    height: 55px;
+    width: min(255px, calc(175px + 80 * ((100vw - 1024px) / 896)));
+    height: min(55px, calc(35px + 20 * ((100vw - 1024px) / 896)));
     background-color: $white;
-    @include flexBox(100px, row, center, center);
+    @include flexBox(4.2vw, row, center, center);
     color: $black;
 
     &:hover {
@@ -25,28 +25,28 @@
 
 
   .languageTitle {
-    @include textFont(18px, 24px, 600);
+    @include textFont(calc(14px + 4 * ((100vw - 1024px) / 896)), 24px, 600);
   }
 
   .triangleDown {
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 20px solid $black;
+    border-left: min(10px, calc(6px + 4 * ((100vw - 1024px) / 896))) solid transparent;
+    border-right: min(10px, calc(6px + 4 * ((100vw - 1024px) / 896))) solid transparent;
+    border-top: min(20px, calc(14px + 6 * ((100vw - 1024px) / 896))) solid $black;
 
     &_open {
       width: 0;
       height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 20px solid $white;
+      border-left: min(10px, calc(6px + 4 * ((100vw - 1024px) / 896))) solid transparent;
+      border-right: min(10px, calc(6px + 4 * ((100vw - 1024px) / 896))) solid transparent;
+      border-top: min(20px, calc(14px + 6 * ((100vw - 1024px) / 896))) solid $white;
     }
   }
 
   .img {
-    width: 25px;
-    height: 18px;
+    width: calc(20px + 5 * ((100vw - 1024px) / 896));
+    height: calc(14px + 4 * ((100vw - 1024px) / 896));
   }
 
   .dropContainer {
@@ -56,14 +56,14 @@
     .dropList {
       @include flexBox(0, column);
       position: absolute;
-      top: 55px;
+      top: min(55px, calc(35px + 20 * ((100vw - 1024px) / 896)));
 
       .dropItem {
         box-sizing: border-box;
         padding-left: 20px;
         border-top: 1px solid $gray;
-        width: 255px;
-        height: 45px;
+        width: min(255px, calc(175px + 80 * ((100vw - 1024px) / 896)));
+        height: min(45px, calc(35px + 10 * ((100vw - 1024px) / 896)));
         background-color: $white;
         @include flexBox(10px, row, center, flex-start);
         cursor: pointer;
